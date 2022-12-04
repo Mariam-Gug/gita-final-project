@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Page for Products">
+    <meta name="keywords" content="admin page, main page, online-shopping">
+    <meta name="author" content="Mariam Gugutishvili">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">  
+    <title>Admin page</title>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <a class="logo devider" href="index.html">Online Shop Admin</a>
+            <nav class="navigation">
+                <ul class="list">
+                    <li>
+                        <a class="nav-a active" href="index.html">products</a>
+                    </li>
+                    <li>
+                        <a class="nav-a" href="customers.html">customers</a>
+                    </li>
+                    <li>
+                        <a class="nav-a" href="orders.html">orders</a>
+                    </li>
+                    <li>
+                        <a class="nav-a" href="reports.html">reports</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="main-section">
+
+        <div class="filter-section">
+            <div id="filter-show-hide-wrapper" class="filter-show-hide-wrapper">
+                <div class="filter-btn-box">
+                    <div class="inputs">
+                        <div class="filter-input-titles">Name</div>
+                        <input class="filter-input" type="text" id="filter-input-name" name="product-number">
+                    </div>
+                    <button type="button" id="apply-filter-btn" class="btn">Apply</button>
+                </div>
+            </div>
+            <button type="button" id="filter-hide-show-btn" class="btn">Show Filter</button>
+        </div>
+
+        <div class="filter-wrapper" id="filter-wrapper">
+            <h2>Products</h2>
+            <div class="filter-box">
+
+            </div>
+            <div class="product-box">
+
+                <table id="product-table">
+                    <tr id="table-top">
+                        <th>N</th>
+                        <th>Product Name</th>
+                        <th>Product Number</th>
+                        <th>Color</th>
+                        <th>List Price</th>
+                        <th>Modified Data</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+                <table id="filtered-table" class="filtered-table">
+                    <tr id="filtered-table-top">
+                        <th>N</th>
+                        <th>Product Name</th>
+                        <th>Product Number</th>
+                        <th>Color</th>
+                        <th>List Price</th>
+                        <th>Modified Data</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <button id="create-new-product-btn" class="btn active">Create New Product</button>
+
+
+
+        <div class="create-product-container">
+    
+            <form action="" method="POST" id="registration">
+                <h3 id="create-product-title">Create New Product</h3>
+                <div class="inputs">
+                    <div class="input-titles">Name</div>
+                    <input class="name" type="text" placeholder="Enter product name" id="name" name="name">
+                    <span class="error-text" id="error_name"></span>
+                </div>
+                <div class="inputs">
+                    <div class="input-titles">Product Number</div>
+                    <input class="product-number" type="text" placeholder="Enter product number" id="productNumber" name="product-number">
+                    <span class="error-text" id="error_productNumber"></span>
+                </div>
+                <div class="inputs">
+                    <div class="input-titles">Color</div>
+                    <input class="color" type="text" placeholder="Enter product color" id="color" name="color" >
+                </div>
+                <div class="inputs">
+                    <div class="input-titles">Standard Cost</div>
+                    <input class="standard-cost" type="text" placeholder="Enter standard cost"  id="standard-cost" name="standard-cost" >
+                </div>
+                <div class="inputs">
+                    <div class="input-titles">List Price</div>
+                    <input class="list-price" type="text" placeholder="Enter product list price" id="listPrice" name="list-price">
+                    <span class="error-text" id="error_listPrice"></span>
+                </div>
+                <div class="inputs">
+                    <div class="input-titles">Size</div>
+                    <input class="size" type="text" placeholder="Enter product size" id="size" name="size">
+                </div>
+                <div class="inputs">
+                    <div class="input-titles">Weight</div>
+                    <input class="weight" type="text" placeholder="Enter product weight" id="product-weight" name="product-weight">
+                </div>
+                <button id="create-pr-bt" type="submit" class="btn">Create</button>
+                <button type="button" id="close-product-btn" class="btn">Close</button>
+            </form>
+        </div>
+
+
+        <div id="edit-product" class="edit-product">
+
+            <div id="product-edit-box">
+
+                <button type="submit" class="btn">Save</button>
+                <button type="button" id="close-edit-product-btn" class="btn">Back to List</button>
+                <button type="button" id="delete-product-edit" class="btn">Delete</button>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="delete-product" class="delete-product">
+            <h3>Confirm Delete Product</h3>
+            <div>Are you sure you want to delete this product?</d>
+
+            <div id="product-delete-box" class="product-details">
+
+                <button type="submit" class="btn">Delete this Product</button>
+                <button type="button" id="close-delete-product-btn" class="btn">Cancel - Back to List</button>
+            </div>
+        </div>
+
+
+
+    </section>
+    <footer>
+        <div class="footer-wrapper">
+
+        </div>
+
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

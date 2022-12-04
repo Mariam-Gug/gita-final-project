@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=MedievalSharp&family=Montserrat:wght@400&display=swap');
+
+
+:root {
+    --black: #202020;
+    --light-color: #666;
+    --red: #88041c;
+    --dark-red: #5b0313;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --light-border: .1rem solid rgba(0,0,0,.1);
+    --font-color: rgb(38, 38, 38);
+}
+
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgb(215, 215, 215);
+    z-index: 9;
+}
+.header-wrapper {
+    height: 4rem;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 30px;
+    font: 14px 'Montserrat', sans-serif;
+    color: rgb(65, 65, 65);
+    display: flex;
+    align-items: center;
+}
+
+.devider::after {
+    content: '';
+    display: inline-block;
+    height: 40px;
+    width: 1px;
+    margin: 0 14px;
+    background-color: rgb(133, 133, 133);
+    ;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-a {
+    margin-right: 10px;
+    font: 14px 'Montserrat', sans-serif;
+    color: rgb(38, 38, 38);
+    text-transform: capitalize;
+}
+
+.active {
+    color: rgb(7, 7, 7);
+    font-weight: bold;
+}
+
+.main-section {
+    padding-top: 65px;
+}
+
+.filter-wrapper h2 {
+    font: 1.5rem 'Montserrat', sans-serif;
+    color: var(--font-color);
+}
+
+.filter-box {
+    margin: 1rem 0;
+}
+
+
+
+
+
+/* filter section */
+
+.filter-show-hide-wrapper {
+    display: none;
+}
+
+.filter-btn-box {
+    display: flex;
+    align-items: center;
+}
+
+.filter-input-titles {
+    display: inline-block;
+    font: 14px 'Montserrat', sans-serif;
+}
+
+.filter-input {
+    margin-right: 5px;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: .5rem .8rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+
+
+
+
+
+/* table */
+
+#product-table,
+#filtered-table {
+    font: 14px 'Montserrat', sans-serif;
+}
+
+#product-table td, #product-table th,
+#filtered-table td, #filtered-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+
+#product-table tr:nth-child(even),
+#filtered-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#product-table tr:hover,
+#filtered-table tr:hover {
+    background-color: #ddd;
+}
+
+#product-table th, 
+#filtered-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--red);
+    color: white;
+  }
+
+
+.filtered-table {
+    display: none;
+}
+
+
+
+
+
+/* creating new products */
+
+
+
+.create-product-container h3 {
+    font: 1.5rem 'Montserrat', sans-serif;
+    color: var(--font-color);
+}
+
+.create-product-container,
+input::placeholder {
+    font: 14px 'Montserrat', sans-serif;
+}
+
+.inputs {
+    margin: 1rem 0;
+}
+
+.input-titles {
+    display: inline-block;
+    width: 30%;
+}
+
+.create-product-container {
+    display: none;
+}
+
+.btn{
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem 3rem;
+    font: 14px 'Montserrat', sans-serif;
+    font-size: 1.5 rem;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--red);
+    cursor: pointer;
+}
+
+
+
+
+#name:focus,
+#password:focus,
+#password2:focus,
+#email:focus {
+    outline: none;
+}
+
+
+.error-text {
+    display: block;
+    color: var(--dark-red);
+    font-style: italic;
+}
+
+#error_name,
+#error_productName,
+#error_error_listPrice {
+    margin-bottom: 3px;
+}
+.name,
+.product-number,
+.color,
+.standard-cost,
+.list-price,
+.size,
+.weight {
+    width: 30%;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: .5rem .8rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+/* deleting products from list */
+
+
+.delete-product,
+.edit-product,
+.create-btn-wrapper {
+    display: none;
+}
+
+
+
+
+/* customer, order, reports sticker */
+
+.main-section {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.back-to-home {
+    margin-left: 40px;
+    font: 14px 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgb(38, 38, 38);
+}
+
+
+
+
+
+
+.active {
+    display: block;
+}
+
+.not-active {
+    display: none;
+}
