@@ -1,0 +1,85 @@
+
+
+ export let productsList = [
+    {
+        id: 1,
+        productName: "HL Road Frame - Black, 58",
+        productNumber: "FR-R92B-58",
+        color: "Black",
+        listPrice: 900,
+        modifiedDate: "11 November 2021",
+    },
+    {
+        id: 2,
+        productName: "Mountain Bike - Red, 58",
+        productNumber: "FR-R92R-58",
+        color: "Red",
+        listPrice: 1432.50,
+        modifiedDate: "06 August 2021",
+    },
+    {
+        id: 3,
+        productName: "Touring Bike - Red, 62",
+        productNumber: "FR-R92R-62",
+        color: "Red",
+        listPrice: 1431.50,
+        modifiedDate: "09 November 2021",
+    },    
+    {
+        id: 4,
+        productName: "Folding Bike - Red, 44",
+        productNumber: "FR-R92R-44",
+        color: "Red",
+        listPrice: 1431.50,
+        modifiedDate: "18 December 2021",
+    },
+    {
+        id: 5,
+        productName: "BMX - Red, 48",
+        productNumber: "FR-R92R-48",
+        color: "Red",
+        listPrice: 1431.50,
+        modifiedDate: "13 February 2022",
+    },
+    {
+        id: 6,
+        productName: "Recumbent Bike - Red, 52",
+        productNumber: "FR-R92R-52",
+        color: "Red",
+        listPrice: 1431.50,
+        modifiedDate: "28 February 2022",
+    },
+    {
+        id: 7,
+        productName: "HL Road Frame - Red, 56",
+        productNumber: "FR-R92R-56",
+        color: "Red",
+        listPrice: 1431.50,
+        modifiedDate: "25 July 2022",
+    },
+    {
+        id: 8,
+        productName: "Cruiser - Black, 58",
+        productNumber: "FR-R38B-58",
+        color: "Black",
+        listPrice: 337.22,
+        modifiedDate: "12 January 2022",
+    },
+    {
+        id: 9,
+        productName: "HL Road Frame - Black, 60",
+        productNumber: "FR-R38B-60",
+        color: "Black",
+        listPrice: 337.22,
+        modifiedDate: "02 December 2021",
+    },
+    {
+        id: 10,
+        productName: "HL Road Frame - Black, 62",
+        productNumber: "FR-R38B-62",
+        color: "Black",
+        listPrice: 337.22,
+        modifiedDate: "01 December 2021",
+    }
+];
+
