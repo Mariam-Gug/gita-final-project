@@ -2,6 +2,7 @@
 
 
 import { productsList } from './module.js';
+import { filteredTableFunc } from './module.js';
 
 
 
@@ -74,107 +75,7 @@ applyBtn.onclick = () => {
 
 
 
-
-    function filteredTableFunc() {
-
-
-        for(let i = 0; i < filteredProducts.length; i++) {
-
-            let trTag = document.createElement('tr');
-            trTag.setAttribute('class', 'item ' + filteredProducts[i].id);
-    
-            let vals = Object.values(filteredProducts[i]);
-    
-            for(let j = 0; j < vals.length; j++) {
-                let td = document.createElement('td');
-                td.textContent = vals[j];
-                trTag.appendChild(td);
-            }
-    
-    
-            let btnEdit = document.createElement('button');
-            btnEdit.setAttribute('type', 'submit');
-            btnEdit.setAttribute('class', 'edit-btn')
-            btnEdit.textContent = 'edit';
-    
-            trTag.appendChild(btnEdit);
-    
-    
-            let btnDelete = document.createElement('button');
-            btnDelete.setAttribute('type', 'submit');
-            btnDelete.setAttribute('class', 'delete-btn')
-            btnDelete.textContent = 'Delete';
-    
-    
-            trTag.appendChild(btnDelete);
-    
-    
-            filteredTable.appendChild(trTag);
-    
-    
-            //deleting products
-    
-            let deleteProduct = document.getElementById('delete-product');
-    
-            btnDelete.onclick = () => {
-                deleteProduct.classList.add('active');
-                document.getElementById('create-new-product-btn').classList.add('not-active');
-                document.getElementById('filter-wrapper').classList.add('not-active')
-                filterHideShowBtn.classList.add('not-active');
-                filterBox.classList.add('not-active');
-            }
-    
-    
-            document.getElementById('close-delete-product-btn').onclick = () => {
-                deleteProduct.classList.remove('active');
-                document.getElementById('create-new-product-btn').classList.remove('not-active');
-                document.getElementById('filter-wrapper').classList.remove('not-active')
-                filterHideShowBtn.classList.remove('not-active');
-                filterBox.classList.remove('not-active');
-            }
-    
-    
-            // editing products
-    
-    
-            let editProduct = document.getElementById('edit-product');
-    
-            btnEdit.onclick = () => {
-                editProduct.classList.add('active');
-                createNewProductForm.classList.add('active');
-                document.getElementById('create-new-product-btn').classList.add('not-active');
-                document.getElementById('filter-wrapper').classList.add('not-active');
-                
-                document.getElementById('create-pr-bt').classList.add('not-active');
-                document.getElementById('close-product-btn').classList.add('not-active');
-                document.getElementById('create-product-title').textContent = 'Edit Product';
-                filterHideShowBtn.classList.add('not-active');
-                filterBox.classList.add('not-active');
-                
-            }
-    
-    
-            document.getElementById('close-edit-product-btn').onclick = () => {
-                editProduct.classList.remove('active');
-                createNewProductForm.classList.remove('active');
-                document.getElementById('create-new-product-btn').classList.remove('not-active');
-                document.getElementById('filter-wrapper').classList.remove('not-active');
-    
-    
-                document.getElementById('create-pr-bt').classList.remove('not-active');
-                document.getElementById('close-product-btn').classList.remove('not-active');
-                document.getElementById('create-product-title').textContent = 'Create New Product';
-                filterHideShowBtn.classList.remove('not-active');
-                filterBox.classList.remove('not-active');
-    
-    
-            }
-    
-    
-        }
-    }
-
-    filteredTableFunc();
+    filteredTableFunc(filteredProducts);
 }
 
 
